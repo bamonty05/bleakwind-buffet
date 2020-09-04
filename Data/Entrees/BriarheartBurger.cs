@@ -1,30 +1,30 @@
 ﻿/*
  * Author: Brett Montgomery
- * Class name: ThalmorTriple.cs
- * Purpose: Class used to represent the thalmor triple
+ * Class name: BriarheartBurger.cs
+ * Purpose: Class used to represent the briarheart burger
  */
 
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BleakwindBuffet.Data.Entrées
+namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
-    /// Provides the details of the thalmor triple
+    /// Provides the details of the briarheart burger
     /// </summary>
-    public class ThalmorTriple
+    public class BriarheartBurger
     {
         /* stores values of prices for each available size */
         public double Price
         {
-            get { return 8.32; }
+            get { return 6.32; }
         }
 
         /* stores values of calories for each available size */
         public uint Calories
         {
-            get { return 943; }
+            get { return 743; }
         }
 
         private bool bun = true;
@@ -72,51 +72,6 @@ namespace BleakwindBuffet.Data.Entrées
             set { cheese = value; }
         }
 
-        private bool tomato = true;
-
-        /* getter and setter for the private backing variable tomato */
-        public bool Tomato
-        {
-            get { return tomato; }
-            set { tomato = value; }
-        }
-
-        private bool lettuce = true;
-
-        /* getter and setter for the private backing variable lettuce */
-        public bool Lettuce
-        {
-            get { return lettuce; }
-            set { lettuce = value; }
-        }
-
-        private bool mayo = true;
-
-        /* getter and setter for the private backing variable mayo */
-        public bool Mayo
-        {
-            get { return mayo; }
-            set { mayo = value; }
-        }
-
-        private bool bacon = true;
-
-        /* getter and setter for the private backing variable bacon */
-        public bool Bacon
-        {
-            get { return bacon; }
-            set { bacon = value; }
-        }
-
-        private bool egg = true;
-
-        /* getter and setter for the private backing variable egg */
-        public bool Egg
-        {
-            get { return egg; }
-            set { egg = value; }
-        }
-
         /* creates a list of special instructions based on the boolean values of the private backing variables */
         public List<string> SpecialInstructions
         {
@@ -129,11 +84,6 @@ namespace BleakwindBuffet.Data.Entrées
                 if (!mustard) instructions.Add("Hold mustard");
                 if (!pickle) instructions.Add("Hold pickle");
                 if (!cheese) instructions.Add("Hold cheese");
-                if (!tomato) instructions.Add("Hold tomato");
-                if (!lettuce) instructions.Add("Hold lettuce");
-                if (!mayo) instructions.Add("Hold mayo");
-                if (!bacon) instructions.Add("Hold bacon");
-                if (!egg) instructions.Add("Hold egg");
 
                 return instructions;
             }
@@ -142,7 +92,7 @@ namespace BleakwindBuffet.Data.Entrées
         /* overrides the ToString() function and returns the size and name of the side */
         public override string ToString()
         {
-            return "Thalmor Triple";
+            return "Briarheart Burger";
         }
     }
 }

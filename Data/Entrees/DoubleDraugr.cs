@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BleakwindBuffet.Data.Entrées
+namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// Provides the details of the double draugr
