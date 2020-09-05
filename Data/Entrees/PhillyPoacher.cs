@@ -15,13 +15,17 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class PhillyPoacher
     {
-        /* stores values of prices for each available size */
+        /// <summary>
+        /// Stores values of prices for the entree
+        /// </summary>
         public double Price
         {
             get { return 7.23; }
         }
 
-        /* stores values of calories for each available size */
+        /// <summary>
+        /// Stores values of calories for the entree
+        /// </summary>
         public uint Calories
         {
             get { return 784; }
@@ -29,7 +33,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool sirloin = true;
 
-        /* getter and setter for the private backing variable sirloin */
+        /// <summary>
+        /// Getter and setter for the private backing variable sirloin
+        /// </summary>
         public bool Sirloin
         {
             get { return sirloin; }
@@ -38,7 +44,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool onion = true;
 
-        /* getter and setter for the private backing variable onion */
+        /// <summary>
+        /// Getter and setter for the private backing variable onion
+        /// </summary>
         public bool Onion
         {
             get { return onion; }
@@ -47,14 +55,18 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool roll = true;
 
-        /* getter and setter for the private backing variable roll */
+        /// <summary>
+        /// Getter and setter for the private backing variable roll
+        /// </summary>
         public bool Roll
         {
             get { return roll; }
             set { roll = value; }
         }
 
-        /* creates a list of special instructions based on the boolean values of the private backing variables */
+        /// <summary>
+        /// Creates a list of special instructions based on the boolean values of the private backing variables
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -69,7 +81,10 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        /* overrides the ToString() function and returns the size and name of the side */
+        /// <summary>
+        /// Overrides the ToString() function and returns the name of the entree
+        /// </summary>
+        /// <returns>A string containing the name of selected entree</returns>
         public override string ToString()
         {
             return "Philly Poacher";

@@ -15,19 +15,25 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class ThugsTBone
     {
-        /* stores values of prices for each available size */
+        /// <summary>
+        /// Stores values of prices for the entree
+        /// </summary>
         public double Price
         {
             get { return 6.44; }
         }
 
-        /* stores values of calories for each available size */
+        /// <summary>
+        /// Stores values of calories for the entree
+        /// </summary>
         public uint Calories
         {
             get { return 982; }
         }
 
-        /* creates a list of special instructions based on the boolean values of the private backing variables */
+        /// <summary>
+        /// Creates a list of special instructions based on the boolean values of the private backing variables
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -38,7 +44,10 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        /* overrides the ToString() function and returns the size and name of the side */
+        /// <summary>
+        /// Overrides the ToString() function and returns the name of the entree
+        /// </summary>
+        /// <returns>A string containing the name of selected entree</returns>
         public override string ToString()
         {
             return "Thugs T-Bone";

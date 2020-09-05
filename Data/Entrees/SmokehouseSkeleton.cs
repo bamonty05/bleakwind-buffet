@@ -15,13 +15,17 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class SmokehouseSkeleton
     {
-        /* stores values of prices for each available size */
+        /// <summary>
+        /// Stores values of prices for the entree
+        /// </summary>
         public double Price
         {
             get { return 5.62; }
         }
 
-        /* stores values of calories for each available size */
+        /// <summary>
+        /// Stores values of calories for the entree
+        /// </summary>
         public uint Calories
         {
             get { return 602; }
@@ -29,7 +33,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool sausageLink = true;
 
-        /* getter and setter for the private backing variable sausageLink */
+        /// <summary>
+        /// Getter and setter for the private backing variable sausageLink
+        /// </summary>
         public bool SausageLink
         {
             get { return sausageLink; }
@@ -38,7 +44,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool egg = true;
 
-        /* getter and setter for the private backing variable egg */
+        /// <summary>
+        /// Getter and setter for the private backing variable egg
+        /// </summary>
         public bool Egg
         {
             get { return egg; }
@@ -47,7 +55,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool hashBrowns = true;
 
-        /* getter and setter for the private backing variable hashBrowns */
+        /// <summary>
+        /// Getter and setter for the private backing variable hashBrowns
+        /// </summary>
         public bool HashBrowns
         {
             get { return hashBrowns; }
@@ -56,14 +66,18 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool pancake = true;
 
-        /* getter and setter for the private backing variable pancake */
+        /// <summary>
+        /// Getter and setter for the private backing variable pancake
+        /// </summary>
         public bool Pancake
         {
             get { return pancake; }
             set { pancake = value; }
         }
 
-        /* creates a list of special instructions based on the boolean values of the private backing variables */
+        /// <summary>
+        /// Creates a list of special instructions based on the boolean values of the private backing variables
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -79,7 +93,10 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        /* overrides the ToString() function and returns the size and name of the side */
+        /// <summary>
+        /// Overrides the ToString() function and returns the name of the entree
+        /// </summary>
+        /// <returns>A string containing the name of selected entree</returns>
         public override string ToString()
         {
             return "Smokehouse Skeleton";

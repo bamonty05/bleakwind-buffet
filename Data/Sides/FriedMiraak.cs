@@ -18,14 +18,18 @@ namespace BleakwindBuffet.Data.Sides
     {
         private Size size = Size.Small;
 
-        /* getter and setter for the private backing variable size */
+        /// <summary>
+        /// Getter and setter for the private backing variable size
+        /// </summary>
         public Size Size
         {
             get { return this.size; }
             set { this.size = value; }
         }
 
-        /* stores values of calories for each available size */
+        /// <summary>
+        /// Stores values of calories for each available size
+        /// </summary>
         public uint Calories
         {
             get
@@ -44,7 +48,9 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
-        /* stores values of prices for each available size */
+        /// <summary>
+        /// Stores values of prices for each available size
+        /// </summary>
         public double Price
         {
             get
@@ -63,7 +69,10 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
-        /* overrides the ToString() function and returns the size and name of the side */
+        /// <summary>
+        /// Overrides the ToString() function and returns the size and name of the side
+        /// </summary>
+        /// <returns>A string containing the size and name of selected side</returns>
         public override string ToString()
         {
             switch (Size)

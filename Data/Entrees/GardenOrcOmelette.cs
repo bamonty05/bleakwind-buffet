@@ -15,13 +15,17 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class GardenOrcOmelette
     {
-        /* stores values of prices for each available size */
+        /// <summary>
+        /// Stores values of prices for the entree
+        /// </summary>
         public double Price
         {
             get { return 4.57; }
         }
 
-        /* stores values of calories for each available size */
+        /// <summary>
+        /// Stores values of calories for the entree
+        /// </summary>
         public uint Calories
         {
             get { return 404; }
@@ -29,7 +33,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool broccoli = true;
 
-        /* getter and setter for the private backing variable broccoli */
+        /// <summary>
+        /// Getter and setter for the private backing variable broccoli
+        /// </summary>
         public bool Broccoli
         {
             get { return broccoli; }
@@ -38,7 +44,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool mushrooms = true;
 
-        /* getter and setter for the private backing variable mushrooms */
+        /// <summary>
+        /// Getter and setter for the private backing variable mushrooms
+        /// </summary>
         public bool Mushrooms
         {
             get { return mushrooms; }
@@ -47,7 +55,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool tomato = true;
 
-        /* getter and setter for the private backing variable tomato */
+        /// <summary>
+        /// Getter and setter for the private backing variable tomato
+        /// </summary>
         public bool Tomato
         {
             get { return tomato; }
@@ -56,14 +66,18 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool cheddar = true;
 
-        /* getter and setter for the private backing variable cheddar */
+        /// <summary>
+        /// Getter and setter for the private backing variable cheddar
+        /// </summary>
         public bool Cheddar
         {
             get { return cheddar; }
             set { cheddar = value; }
         }
 
-        /* creates a list of special instructions based on the boolean values of the private backing variables */
+        /// <summary>
+        /// Creates a list of special instructions based on the boolean values of the private backing variables
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -79,7 +93,10 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        /* overrides the ToString() function and returns the size and name of the side */
+        /// <summary>
+        /// Overrides the ToString() function and returns the name of the entree
+        /// </summary>
+        /// <returns>A string containing the name of selected entree</returns>
         public override string ToString()
         {
             return "Garden Orc Omelette";

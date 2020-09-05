@@ -18,14 +18,18 @@ namespace BleakwindBuffet.Data.Drinks
     {
         private Size size = Size.Small;
 
-        /* getter and setter for the private backing variable size */
+        /// <summary>
+        /// Getter and setter for the private backing variable size
+        /// </summary>
         public Size Size
         {
-            get { return this.Size; }
+            get { return this.size; }
             set { this.size = value; }
         }
 
-        /* stores values of calories for each available size */
+        /// <summary>
+        /// Stores values of calories for each available size
+        /// </summary>
         public uint Calories
         {
             get
@@ -44,7 +48,9 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        /* stores values of prices for each available size */
+        /// <summary>
+        /// Stores values of prices for each available size
+        /// </summary>
         public double Price
         {
             get
@@ -65,7 +71,9 @@ namespace BleakwindBuffet.Data.Drinks
 
         private bool ice = true;
 
-        /* getter and setter for the private backing variable ice */
+        /// <summary>
+        /// Getter and setter for the private backing variable ice
+        /// </summary>
         public bool Ice
         {
             get { return ice; }
@@ -74,14 +82,18 @@ namespace BleakwindBuffet.Data.Drinks
 
         private bool lemon = false;
 
-        /* getter and setter for the private backing variable lemon */
+        /// <summary>
+        /// Getter and setter for the private backing variable lemon
+        /// </summary>
         public bool Lemon
         {
             get { return lemon; }
             set { lemon = value; }
         }
 
-        /* creates a list of special instructions based on the boolean values of the private backing variables */
+        /// <summary>
+        /// Creates a list of special instructions based on the boolean values of the private backing variables
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -95,7 +107,10 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
-        /* overrides the ToString() function and returns the size and name of the side */
+        /// <summary>
+        /// Overrides the ToString() function and returns the size and name of the drink
+        /// </summary>
+        /// <returns>A string containing the size and name of selected drink</returns>
         public override string ToString()
         {
             switch (Size)

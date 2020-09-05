@@ -15,13 +15,17 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class DoubleDraugr
     {
-        /* stores values of prices for each available size */
+        /// <summary>
+        /// Stores values of prices for the entree
+        /// </summary>
         public double Price
         {
             get { return 7.32; }
         }
 
-        /* stores values of calories for each available size */
+        /// <summary>
+        /// Stores values of calories for the entree
+        /// </summary>
         public uint Calories
         {
             get { return 843; }
@@ -29,7 +33,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool bun = true;
 
-        /* getter and setter for the private backing variable bun */
+        /// <summary>
+        /// Getter and setter for the private backing variable bun
+        /// </summary>
         public bool Bun
         {
             get { return bun; }
@@ -38,7 +44,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool ketchup = true;
 
-        /* getter and setter for the private backing variable ketchup */
+        /// <summary>
+        /// Getter and setter for the private backing variable ketchup
+        /// </summary>
         public bool Ketchup
         {
             get { return ketchup; }
@@ -47,7 +55,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool mustard = true;
 
-        /* getter and setter for the private backing variable mustard */
+        /// <summary>
+        /// Getter and setter for the private backing variable mustard
+        /// </summary>
         public bool Mustard
         {
             get { return mustard; }
@@ -56,7 +66,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool pickle = true;
 
-        /* getter and setter for the private backing variable pickle */
+        /// <summary>
+        /// Getter and setter for the private backing variable pickle
+        /// </summary>
         public bool Pickle
         {
             get { return pickle; }
@@ -65,7 +77,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool cheese = true;
 
-        /* getter and setter for the private backing variable cheese */
+        /// <summary>
+        /// Getter and setter for the private backing variable cheese
+        /// </summary>
         public bool Cheese
         {
             get { return cheese; }
@@ -74,7 +88,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool tomato = true;
 
-        /* getter and setter for the private backing variable tomato */
+        /// <summary>
+        /// Getter and setter for the private backing variable tomato
+        /// </summary>
         public bool Tomato
         {
             get { return tomato; }
@@ -83,7 +99,9 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool lettuce = true;
 
-        /* getter and setter for the private backing variable lettuce */
+        /// <summary>
+        /// Getter and setter for the private backing variable lettuce
+        /// </summary>
         public bool Lettuce
         {
             get { return lettuce; }
@@ -92,14 +110,18 @@ namespace BleakwindBuffet.Data.Entrees
 
         private bool mayo = true;
 
-        /* getter and setter for the private backing variable mayo */
+        /// <summary>
+        /// Getter and setter for the private backing variable mayo
+        /// </summary>
         public bool Mayo
         {
             get { return mayo; }
             set { mayo = value; }
         }
 
-        /* creates a list of special instructions based on the boolean values of the private backing variables */
+        /// <summary>
+        /// Creates a list of special instructions based on the boolean values of the private backing variables
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -119,7 +141,10 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
-        /* overrides the ToString() function and returns the size and name of the side */
+        /// <summary>
+        /// Overrides the ToString() function and returns the name of the entree
+        /// </summary>
+        /// <returns>A string containing the name of selected entree</returns>
         public override string ToString()
         {
             return "Double Draugr";
