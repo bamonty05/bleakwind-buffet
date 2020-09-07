@@ -70,6 +70,19 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         /// <summary>
+        /// Creates a list of special instructions based on the boolean values of the private backing variables
+        /// </summary>
+        public List<string> SpecialInstructions
+        {
+            get
+            {
+                var instructions = new List<string>();
+
+                return instructions;
+            }
+        }
+
+        /// <summary>
         /// Overrides the ToString() function and returns the size and name of the side
         /// </summary>
         /// <returns>A string containing the size and name of selected side</returns>
