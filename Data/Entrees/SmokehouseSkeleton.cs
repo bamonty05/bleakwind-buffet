@@ -13,12 +13,12 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Provides the details of the smokehouse skeleton
     /// </summary>
-    public class SmokehouseSkeleton
+    public class SmokehouseSkeleton : Entree
     {
         /// <summary>
         /// Stores values of prices for the entree
         /// </summary>
-        public double Price
+        public override double Price
         {
             get { return 5.62; }
         }
@@ -26,7 +26,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Stores values of calories for the entree
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get { return 602; }
         }
@@ -78,7 +78,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Creates a list of special instructions based on the boolean values of the private backing variables
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

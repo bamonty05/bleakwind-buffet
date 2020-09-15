@@ -14,23 +14,14 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Provides the details of sailor soda
     /// </summary>
-    public class SailorSoda
+    public class SailorSoda : Drink
     {
         private Size size = Size.Small;
 
         /// <summary>
-        /// Getter and setter for the private backing variable size
-        /// </summary>
-        public Size Size
-        {
-            get { return this.size; }
-            set { this.size = value; }
-        }
-
-        /// <summary>
         /// Stores values of calories for each available size
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -51,7 +42,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Stores values of prices for each available size
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -94,7 +85,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Creates a list of special instructions based on the boolean values of the private backing variables
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

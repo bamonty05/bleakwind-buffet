@@ -13,12 +13,12 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Provides the details of the philly poacher
     /// </summary>
-    public class PhillyPoacher
+    public class PhillyPoacher : Entree
     {
         /// <summary>
         /// Stores values of prices for the entree
         /// </summary>
-        public double Price
+        public override double Price
         {
             get { return 7.23; }
         }
@@ -26,7 +26,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Stores values of calories for the entree
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get { return 784; }
         }
@@ -67,7 +67,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Creates a list of special instructions based on the boolean values of the private backing variables
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
