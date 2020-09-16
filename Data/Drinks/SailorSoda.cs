@@ -16,8 +16,6 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class SailorSoda : Drink
     {
-        private Size size = Size.Small;
-
         /// <summary>
         /// Stores values of calories for each available size
         /// </summary>
@@ -124,6 +122,7 @@ namespace BleakwindBuffet.Data.Drinks
                 case SodaFlavor.Watermelon:
                     tempFlavor = "Watermelon";
                     break;
+                default: throw new NotImplementedException("Unkown Flavor");
             }
             switch (Size)
             {

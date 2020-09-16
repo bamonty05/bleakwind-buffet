@@ -16,8 +16,6 @@ namespace BleakwindBuffet.Data.Sides
     /// </summary>
     public class DragonbornWaffleFries : Side
     {
-        private Size size = Size.Small;
-
         /// <summary>
         /// Stores values of calories for each available size
         /// </summary>

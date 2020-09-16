@@ -16,8 +16,6 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     public class MarkarthMilk : Drink
     {
-        private Size size = Size.Small;
-
         /// <summary>
         /// Stores values of calories for each available size
         /// </summary>
