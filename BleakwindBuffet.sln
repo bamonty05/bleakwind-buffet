@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataTests", "DataTests\DataTests.csproj", "{B58727B9-F783-46C8-BCC7-5122A1A4537E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{0215E853-7734-4449-BFA3-8811BDC2416F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\OneDrive\Desktop\School\CIS 400\BleakwindBuffetClassUML.vsdx = ..\..\..\..\OneDrive\Desktop\School\CIS 400\BleakwindBuffetClassUML.vsdx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
