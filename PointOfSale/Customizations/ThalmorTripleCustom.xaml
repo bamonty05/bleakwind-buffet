@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="PointOfSale.Customizations.ThalmorTripleCustom"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale.Customizations"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+
+    <Border Name="menuBorder">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <TextBlock DockPanel.Dock="Top" Grid.ColumnSpan="3" FontWeight="Bold" TextAlignment="Center" FontSize="30">
+                Customize Thalmor Triple
+            </TextBlock>
+            <TextBlock Grid.Row="1" FontWeight="Bold" TextAlignment="Center" FontSize="13">
+                Condiments
+            </TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" FontWeight="Bold" TextAlignment="Center" FontSize="13">
+                Misc.
+            </TextBlock>
+            <Button Click="Done" Grid.Row="3" Grid.Column="3" Name="doneButton">
+                Done
+            </Button>
+            <Button Click="Cancel" Grid.Row="3" Grid.Column="0" Name="cancelButton">
+                Cancel
+            </Button>
+            <StackPanel Grid.Row="2">
+                <CheckBox Name="ketchupCheck">
+                    Ketchup
+                </CheckBox>
+                <CheckBox Name="mustardCheck">
+                    Mustard
+                </CheckBox>
+                <CheckBox Name="pickleCheck">
+                    Pickle
+                </CheckBox>
+                <CheckBox Name="tomatoCheck">
+                    Tomato
+                </CheckBox>
+                <CheckBox Name="lettuceCheck">
+                    Lettuce
+                </CheckBox>
+                <CheckBox Name="mayoCheck">
+                    Mayo
+                </CheckBox>
+                <CheckBox Name="baconCheck">
+                    Bacon
+                </CheckBox>
+                <CheckBox Name="eggCheck">
+                    Egg
+                </CheckBox>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="1">
+                <CheckBox Name="bunCheck">
+                    Bun
+                </CheckBox>
+                <CheckBox Name="cheeseCheck">
+                    Cheese
+                </CheckBox>
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</UserControl>
