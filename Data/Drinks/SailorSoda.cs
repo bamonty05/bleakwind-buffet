@@ -8,14 +8,80 @@ using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// Provides the details of sailor soda
     /// </summary>
-    public class SailorSoda : Drink
+    public class SailorSoda : Drink, INotifyPropertyChanged
     {
+        /// <summary>
+        /// The property changed event
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private Size size = Size.Small;
+
+        /// <summary>
+        /// Size of the drink
+        /// </summary>
+        public override Size Size
+        {
+            get { return size; }
+            set
+            {
+                size = value;
+
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SizeSmall"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SizeMedium"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SizeLarge"));
+            }
+        }
+
+        /// <summary>
+        /// Checks if size is small and sets size to small
+        /// </summary>
+        public override bool SizeSmall
+        {
+            get { return Size == Size.Small; }
+            set
+            {
+                Size = Size.Small;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
+        /// <summary>
+        /// Checks if size is medium and sets size to medium
+        /// </summary>
+        public override bool SizeMedium
+        {
+            get { return Size == Size.Medium; }
+            set
+            {
+                Size = Size.Medium;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
+        /// <summary>
+        /// Checks if size is large and sets size to large
+        /// </summary>
+        public override bool SizeLarge
+        {
+            get { return Size == Size.Large; }
+            set
+            {
+                Size = Size.Large;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
         /// <summary>
         /// Stores values of calories for each available size
         /// </summary>
@@ -65,8 +131,99 @@ namespace BleakwindBuffet.Data.Drinks
         /// </summary>
         public SodaFlavor Flavor
         {
-            get { return this.flavor; }
-            set { this.flavor = value; }
+            get { return flavor; }
+            set
+            {
+                flavor = value;
+
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Flavor"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlavorCherry"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlavorBlackberry"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlavorGrapefruit"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlavorLemon"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlavorPeach"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FlavorWatermelon"));
+            }
+        }
+
+        /// <summary>
+        /// Checks if flavor if cherry and sets flavor to cherry
+        /// </summary>
+        public bool FlavorCherry
+        {
+            get { return Flavor == SodaFlavor.Cherry; }
+            set
+            {
+                Flavor = SodaFlavor.Cherry;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
+        /// <summary>
+        /// Checks if flavor if blackberry and sets flavor to blackberry
+        /// </summary>
+        public bool FlavorBlackberry
+        {
+            get { return Flavor == SodaFlavor.Blackberry; }
+            set
+            {
+                Flavor = SodaFlavor.Blackberry;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
+        /// <summary>
+        /// Checks if flavor if grapefruit and sets flavor to grapefruit
+        /// </summary>
+        public bool FlavorGrapefruit
+        {
+            get { return Flavor == SodaFlavor.Grapefruit; }
+            set
+            {
+                Flavor = SodaFlavor.Grapefruit;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
+        /// <summary>
+        /// Checks if flavor if lemon and sets flavor to lemon
+        /// </summary>
+        public bool FlavorLemon
+        {
+            get { return Flavor == SodaFlavor.Lemon; }
+            set
+            {
+                Flavor = SodaFlavor.Lemon;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
+        /// <summary>
+        /// Checks if flavor if peach and sets flavor to peach
+        /// </summary>
+        public bool FlavorPeach
+        {
+            get { return Flavor == SodaFlavor.Peach; }
+            set
+            {
+                Flavor = SodaFlavor.Peach;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
+        }
+
+        /// <summary>
+        /// Checks if flavor if watermelon and sets flavor to watermelon
+        /// </summary>
+        public bool FlavorWatermelon
+        {
+            get { return Flavor == SodaFlavor.Watermelon; }
+            set
+            {
+                Flavor = SodaFlavor.Watermelon;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+            }
         }
 
         private bool ice = true;
@@ -77,7 +234,12 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Ice
         {
             get { return ice; }
-            set { ice = value; }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         /// <summary>

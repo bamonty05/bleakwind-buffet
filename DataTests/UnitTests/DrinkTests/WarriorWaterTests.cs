@@ -10,11 +10,83 @@ using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Drinks;
 using System.Runtime;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class WarriorWaterTests
     {
+        [Fact]
+        public void ChangingIceNotifiesIceProperty()
+        {
+            var ww = new WarriorWater();
+            Assert.PropertyChanged(ww, "Ice", () =>
+            {
+                ww.Ice = true;
+            });
+            Assert.PropertyChanged(ww, "Ice", () =>
+            {
+                ww.Ice = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingIceNotifiesSpecialInstructionsProperty()
+        {
+            var ww = new WarriorWater();
+            Assert.PropertyChanged(ww, "SpecialInstructions", () =>
+            {
+                ww.Ice = true;
+            });
+            Assert.PropertyChanged(ww, "SpecialInstructions", () =>
+            {
+                ww.Ice = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperty()
+        {
+            var ww = new WarriorWater();
+            Assert.PropertyChanged(ww, "SizeSmall", () =>
+            {
+                ww.Size = Size.Small;
+            });
+            Assert.PropertyChanged(ww, "SizeMedium", () =>
+            {
+                ww.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(ww, "SizeLarge", () =>
+            {
+                ww.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesPriceProperty()
+        {
+            var ww = new WarriorWater();
+            Assert.PropertyChanged(ww, "Price", () =>
+            {
+                ww.Size = Size.Small;
+            });
+            Assert.PropertyChanged(ww, "Price", () =>
+            {
+                ww.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(ww, "Price", () =>
+            {
+                ww.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ShouldImplementINotifyProperty()
+        {
+            WarriorWater ww = new WarriorWater();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(ww);
+        }
+
         [Fact]
         public void ShouldBeADrink()
         {

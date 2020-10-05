@@ -35,26 +35,46 @@
             <Button Click="Cancel" Grid.Row="3" Grid.Column="0" Name="cancelButton">
                 Cancel
             </Button>
+            
             <StackPanel Grid.Row="2">
-                <CheckBox Name="smallCheck">
+                <CheckBox Name="smallCheck" IsChecked="{Binding Path=SizeSmall}">
                     Small
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="3" ScaleY="3" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
-                <CheckBox Name="mediumCheck">
+                <CheckBox Name="mediumCheck" IsChecked="{Binding Path=SizeMedium}">
                     Medium
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="3" ScaleY="3" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
-                <CheckBox Name="largeCheck">
+                <CheckBox Name="largeCheck" IsChecked="{Binding Path=SizeLarge}">
                     Large
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="3" ScaleY="3" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
             </StackPanel>
+            
             <StackPanel Grid.Row="2" Grid.Column="1">
-                <CheckBox Name="decafCheck">
+                <CheckBox Name="decafCheck" IsChecked="{Binding Path=Decaf}">
                     Decaf
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="3" ScaleY="3" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
-                <CheckBox Name="iceCheck">
+                <CheckBox Name="iceCheck" IsChecked="{Binding Path=Ice}">
                     Ice
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="3" ScaleY="3" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
-                <CheckBox Name="creamCheck">
+                <CheckBox Name="creamCheck" IsChecked="{Binding Path=RoomForCream}">
                     Cream
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="3" ScaleY="3" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
             </StackPanel>
 

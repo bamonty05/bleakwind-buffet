@@ -11,11 +11,83 @@ using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Drinks;
 using System.Runtime;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class ArentinoAppleJuiceTests
     {
+        [Fact]
+        public void ChangingIceNotifiesIceProperty()
+        {
+            var aj = new ArentinoAppleJuice();
+            Assert.PropertyChanged(aj, "Ice", () =>
+            {
+                aj.Ice = true;
+            });
+            Assert.PropertyChanged(aj, "Ice", () =>
+            {
+                aj.Ice = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingIceNotifiesSpecialInstructionsProperty()
+        {
+            var aj = new ArentinoAppleJuice();
+            Assert.PropertyChanged(aj, "SpecialInstructions", () =>
+            {
+                aj.Ice = true;
+            });
+            Assert.PropertyChanged(aj, "SpecialInstructions", () =>
+            {
+                aj.Ice = false;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperty()
+        {
+            var aj = new ArentinoAppleJuice();
+            Assert.PropertyChanged(aj, "SizeSmall", () =>
+            {
+                aj.Size = Size.Small;
+            });
+            Assert.PropertyChanged(aj, "SizeMedium", () =>
+            {
+                aj.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(aj, "SizeLarge", () =>
+            {
+                aj.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesPriceProperty()
+        {
+            var aj = new ArentinoAppleJuice();
+            Assert.PropertyChanged(aj, "Price", () =>
+            {
+                aj.Size = Size.Small;
+            });
+            Assert.PropertyChanged(aj, "Price", () =>
+            {
+                aj.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(aj, "Price", () =>
+            {
+                aj.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ShouldImplementINotifyProperty()
+        {
+            ArentinoAppleJuice aj = new ArentinoAppleJuice();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(aj);
+        }
+
         [Fact]
         public void ShouldBeADrink()
         {

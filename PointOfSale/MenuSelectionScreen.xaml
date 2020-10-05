@@ -20,6 +20,7 @@
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
+            
             <TextBlock DockPanel.Dock="Top" Grid.ColumnSpan="3" FontWeight="Bold" TextAlignment="Center" FontSize="30">
                 Add to Order
             </TextBlock>
@@ -32,57 +33,60 @@
             <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" FontWeight="Bold" TextAlignment="Center" FontSize="15">
                 Drinks
             </TextBlock>
+            
             <StackPanel Grid.Row="2">
-                <Button Click="AddBriarheartBurger" Name="briarheartButton" Height="45">
+                <Button Click="AddBriarheartBurger" Name="briarheartButton" Height="45" FontSize="20">
                     Briarheart Burger
                 </Button>
-                <Button Click="AddDoubleDraugr" Height="45">
+                <Button Click="AddDoubleDraugr" Height="45" FontSize="20">
                     Double Draugr
                 </Button>
-                <Button Click="AddThalmorTriple" Height="45">
+                <Button Click="AddThalmorTriple" Height="45" FontSize="20">
                     Thalmor Triple
                 </Button>
-                <Button Click="AddPhillyPoacher" Height="45">
+                <Button Click="AddPhillyPoacher" Height="45" FontSize="20">
                     Philly Poacher
                 </Button>
-                <Button Click="AddSmokehouseSkeleton" Height="45">
+                <Button Click="AddSmokehouseSkeleton" Height="45" FontSize="18">
                     Smokehouse Skeleton
                 </Button>
-                <Button Click="AddGardenOrcOmelette" Height="45">
+                <Button Click="AddGardenOrcOmelette" Height="45" FontSize="20">
                     Gardon Orc Omelette
                 </Button>
-                <Button Click="AddThugsTBone" Height="45">
+                <Button Click="AddThugsTBone" Height="45" FontSize="20">
                     Thugs T-Bone
                 </Button>
             </StackPanel>
+            
             <StackPanel Grid.Row="2" Grid.Column="1">
-                <Button Click="AddDragonbornWaffleFries" Height="45">
+                <Button Click="AddDragonbornWaffleFries" Height="50" FontSize="17">
                     Dragonborn Waffle Fries
                 </Button>
-                <Button Click="AddFriedMiraak" Height="45">
+                <Button Click="AddFriedMiraak" Height="50" FontSize="20">
                     Fried Miraak
                 </Button>
-                <Button Click="AddMadOtarGrits" Height="45">
+                <Button Click="AddMadOtarGrits" Height="50" FontSize="20">
                     Mad Otar Grits
                 </Button>
-                <Button Click="AddVokunSalad" Height="45">
+                <Button Click="AddVokunSalad" Height="50" FontSize="20">
                     Vokun Salad
                 </Button>
             </StackPanel>
+            
             <StackPanel Grid.Row="2" Grid.Column="2">
-                <Button Click="AddArentinoAppleJuice" Height="45">
+                <Button Click="AddArentinoAppleJuice" Height="50" FontSize="20">
                     Arentino Apple Juice
                 </Button>
-                <Button Click="AddCandlehearthCoffee" Height="45">
+                <Button Click="AddCandlehearthCoffee" Height="50" FontSize="20">
                     Candlehearth Coffee
                 </Button>
-                <Button Click="AddMarkarthMilk" Height="45">
+                <Button Click="AddMarkarthMilk" Height="50" FontSize="20">
                     Markarth Milk
                 </Button>
-                <Button Click="AddSailorSoda" Height="45">
+                <Button Click="AddSailorSoda" Height="50" FontSize="20">
                     Sailor Soda
                 </Button>
-                <Button Click="AddWarriorWater" Height="45">
+                <Button Click="AddWarriorWater" Height="50" FontSize="20">
                     Warrior Water
                 </Button>
             </StackPanel>

@@ -36,23 +36,40 @@
             <Button Click="Cancel" Grid.Row="3" Grid.Column="0" Name="cancelButton">
                 Cancel
             </Button>
+            
             <StackPanel Grid.Row="2">
-                <CheckBox Name="ketchupCheck">
+                <CheckBox Name="ketchupCheck" IsChecked="{Binding Path=Ketchup}">
                     Ketchup
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="3" ScaleY="3" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
-                <CheckBox Name="mustardCheck">
+                <CheckBox Name="mustardCheck" IsChecked="{Binding Path=Mustard}">
                     Mustard
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="3" ScaleY="3" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
-                <CheckBox Name="pickleCheck">
+                <CheckBox Name="pickleCheck" IsChecked="{Binding Path=Pickle}">
                     Pickle
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="3" ScaleY="3" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
             </StackPanel>
+
             <StackPanel Grid.Row="2" Grid.Column="1">
-                <CheckBox Name="bunCheck">
+                <CheckBox Name="bunCheck" IsChecked="{Binding Path=Bun}">
                     Bun
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="3" ScaleY="3" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
-                <CheckBox Name="cheeseCheck">
+                <CheckBox Name="cheeseCheck" IsChecked="{Binding Path=Cheese}">
                     Cheese
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="3" ScaleY="3" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
             </StackPanel>
 

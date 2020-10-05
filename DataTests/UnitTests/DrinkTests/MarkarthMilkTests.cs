@@ -9,11 +9,83 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Drinks;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
     public class MarkarthMilkTests
     {
+        [Fact]
+        public void ChangingIceNotifiesIceProperty()
+        {
+            var mm = new MarkarthMilk();
+            Assert.PropertyChanged(mm, "Ice", () =>
+            {
+                mm.Ice = true;
+            });
+            Assert.PropertyChanged(mm, "Ice", () =>
+            {
+                mm.Ice = false;
+            });
+        }
+        
+        [Fact]
+        public void ChangingIceNotifiesSpecialInstructionsProperty()
+        {
+            var mm = new MarkarthMilk();
+            Assert.PropertyChanged(mm, "SpecialInstructions", () =>
+            {
+                mm.Ice = true;
+            });
+            Assert.PropertyChanged(mm, "SpecialInstructions", () =>
+            {
+                mm.Ice = false;
+            });
+        }
+        
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperty()
+        {
+            var mm = new MarkarthMilk();
+            Assert.PropertyChanged(mm, "SizeSmall", () =>
+            {
+                mm.Size = Size.Small;
+            });
+            Assert.PropertyChanged(mm, "SizeMedium", () =>
+            {
+                mm.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(mm, "SizeLarge", () =>
+            {
+                mm.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesPriceProperty()
+        {
+            var mm = new MarkarthMilk();
+            Assert.PropertyChanged(mm, "Price", () =>
+            {
+                mm.Size = Size.Small;
+            });
+            Assert.PropertyChanged(mm, "Price", () =>
+            {
+                mm.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(mm, "Price", () =>
+            {
+                mm.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ShouldImplementINotifyProperty()
+        {
+            MarkarthMilk mm = new MarkarthMilk();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(mm);
+        }
+
         [Fact]
         public void ShouldBeADrink()
         {

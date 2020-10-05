@@ -7,14 +7,20 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// Provides the details of the philly poacher
     /// </summary>
-    public class PhillyPoacher : Entree
+    public class PhillyPoacher : Entree, INotifyPropertyChanged
     {
+        /// <summary>
+        /// The property changed event
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Stores values of prices for the entree
         /// </summary>
@@ -39,7 +45,12 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Sirloin
         {
             get { return sirloin; }
-            set { sirloin = value; }
+            set
+            {
+                sirloin = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sirloin"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         private bool onion = true;
@@ -50,7 +61,12 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Onion
         {
             get { return onion; }
-            set { onion = value; }
+            set
+            {
+                onion = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Onion"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         private bool roll = true;
@@ -61,7 +77,12 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Roll
         {
             get { return roll; }
-            set { roll = value; }
+            set
+            {
+                roll = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Roll"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         /// <summary>

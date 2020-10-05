@@ -10,11 +10,55 @@ using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using System.Runtime;
 using BleakwindBuffet.Data.Sides;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class MadOtarGritsTests
     {
+        [Fact]
+        public void ChangingSizeNotifiesSizeProperty()
+        {
+            var mog = new MadOtarGrits();
+            Assert.PropertyChanged(mog, "SizeSmall", () =>
+            {
+                mog.Size = Size.Small;
+            });
+            Assert.PropertyChanged(mog, "SizeMedium", () =>
+            {
+                mog.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(mog, "SizeLarge", () =>
+            {
+                mog.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ChangingSizeNotifiesPriceProperty()
+        {
+            var mog = new MadOtarGrits();
+            Assert.PropertyChanged(mog, "Price", () =>
+            {
+                mog.Size = Size.Small;
+            });
+            Assert.PropertyChanged(mog, "Price", () =>
+            {
+                mog.Size = Size.Medium;
+            });
+            Assert.PropertyChanged(mog, "Price", () =>
+            {
+                mog.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ShouldImplementINotifyProperty()
+        {
+            MadOtarGrits mog = new MadOtarGrits();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(mog);
+        }
+
         [Fact]
         public void ShouldBeASide()
         {

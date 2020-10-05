@@ -32,22 +32,34 @@
             <Button Click="Cancel" Grid.Row="3" Grid.Column="0" Name="cancelButton">
                 Cancel
             </Button>
+
             <StackPanel Grid.Row="2">
-                <CheckBox Name="sausageCheck">
+                <CheckBox Name="sausageCheck" IsChecked="{Binding Path=SausageLink}">
                     Sausage
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="2" ScaleY="2" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
-                <CheckBox Name="eggCheck">
+                <CheckBox Name="eggCheck" IsChecked="{Binding Path=Egg}">
                     Egg
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="2" ScaleY="2" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
-                <CheckBox Name="hashbrownsCheck">
+                <CheckBox Name="hashbrownsCheck" IsChecked="{Binding Path=HashBrowns}">
                     Hash Browns
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="2" ScaleY="2" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
-                <CheckBox Name="pancakeCheck">
+                <CheckBox Name="pancakeCheck" IsChecked="{Binding Path=Pancake}">
                     Pancake
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="2" ScaleY="2" />
+                    </CheckBox.LayoutTransform>
                 </CheckBox>
             </StackPanel>
 
-        
         </Grid>
     </Border>
 </UserControl>

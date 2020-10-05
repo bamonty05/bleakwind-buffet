@@ -7,14 +7,20 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// Provides the details of the thugs t-bone
     /// </summary>
-    public class ThugsTBone : Entree
+    public class ThugsTBone : Entree, INotifyPropertyChanged
     {
+        /// <summary>
+        /// The property changed event
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Stores values of prices for the entree
         /// </summary>
