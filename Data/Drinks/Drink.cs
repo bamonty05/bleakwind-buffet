@@ -8,14 +8,18 @@ using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// A base class representing the common properties of drinks
     /// </summary>
-    public abstract class Drink : IOrderItem
+    public abstract class Drink : IOrderItem, INotifyPropertyChanged
     {
+        // Event handler for property changed
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// The size of the drink
         /// </summary>

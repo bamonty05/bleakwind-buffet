@@ -16,6 +16,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data;
+using BleakwindBuffet.Data.Entrees;
+using BleakwindBuffet.Data.Order;
+using PointOfSale.Customizations;
 
 namespace PointOfSale
 {
@@ -26,7 +30,40 @@ namespace PointOfSale
     {
         public OrderComponent()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        // Remove button click event handler
+        private void RemoveButtonClick(object sender, RoutedEventArgs e)
+        {
+            var screen = new OrderComponent();
+            if (DataContext is Order order)
+            {
+                var btn = sender as Button;
+                order.Remove(btn.DataContext as IOrderItem);
+            }
+        }
+
+        // Edit item click event handler
+        private void EditItemClick(object sender, SelectionChangedEventArgs e)
+        {
+            if (OrderList.SelectedItem == null)
+            {
+                return;
+            }
+            string itemString = OrderList.SelectedItem.ToString();
+
+            if (itemString.Contains("Briarheart Burger"))
+            {
+                
+                BriarheartBurger item = e.AddedItems[0] as BriarheartBurger;
+                if (DataContext is Order order)
+                {
+                    var screen = new BriarheartBurgerCustom();
+                    screen.DataContext = item;
+                    
+                }
+            }
         }
     }
 }

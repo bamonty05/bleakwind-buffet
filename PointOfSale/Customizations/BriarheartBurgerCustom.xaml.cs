@@ -31,14 +31,16 @@ namespace PointOfSale.Customizations
 
         // Click event handler for the Done button
         void Done(object sender, RoutedEventArgs e)
-        {
-            menuBorder.Child = new MenuSelection();
-        }
-
-        // Click event handler for the Cancel button
-        void Cancel(object sender, RoutedEventArgs e)
-        {
-            menuBorder.Child = new MenuSelection();
+        {            
+            DependencyObject parent = this;
+            do
+            {
+                parent = LogicalTreeHelper.GetParent(parent);
+            } while (!(parent is MainWindow || parent is null));
+            if (parent is MainWindow menu)
+            {
+                menu.displayBorder.Child = new MenuSelection();
+            }
         }
     }
 }

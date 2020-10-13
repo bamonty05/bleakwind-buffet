@@ -31,10 +31,7 @@
             </TextBlock>
             <Button Click="Done" Grid.Row="3" Grid.Column="3" Name="doneButton">
                 Done
-            </Button>
-            <Button Click="Cancel" Grid.Row="3" Grid.Column="0" Name="cancelButton">
-                Cancel
-            </Button>
+            </Button>            
             
             <StackPanel Grid.Row="2">
                 <CheckBox Name="smallCheck"  IsChecked="{Binding Path=SizeSmall}">

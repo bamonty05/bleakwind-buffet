@@ -10,9 +10,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data;
-using BleakwindBuffet.Data.Drinks;
-using BleakwindBuffet.Data.Entrees;
-using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Menu;
 
 namespace BleakwindBuffet.DataTests.UnitTests

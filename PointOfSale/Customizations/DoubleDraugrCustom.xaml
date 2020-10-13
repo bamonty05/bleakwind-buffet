@@ -32,9 +32,7 @@
             <Button Click="Done" Grid.Row="3" Grid.Column="3" Name="doneButton">
                 Done
             </Button>
-            <Button Click="Cancel" Grid.Row="3" Grid.Column="0" Name="cancelButton">
-                Cancel
-            </Button>
+            
             
             <StackPanel Grid.Row="2">
                 <CheckBox Name="ketchupCheck" IsChecked="{Binding Path=Ketchup}">

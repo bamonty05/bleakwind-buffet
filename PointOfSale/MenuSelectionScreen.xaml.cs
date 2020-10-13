@@ -19,6 +19,7 @@ using System.Windows.Shapes;
 using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Order;
 using BleakwindBuffet.Data.Enums;
 using PointOfSale.Customizations;
 
@@ -42,7 +43,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
-
+            if(DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Double Draugr button
@@ -53,6 +57,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Thalmor Triple button
@@ -63,6 +71,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Garden Orc Omelette button
@@ -73,6 +85,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Philly Poacher button
@@ -83,6 +99,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Smokehouse Skeleton button
@@ -93,6 +113,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Thugs T-Bone button
@@ -103,6 +127,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Dragonborn Waffle Fries button
@@ -113,6 +141,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Fried Miraak button
@@ -123,6 +155,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Mad Otar Grits
@@ -133,6 +169,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Vokun Salad button
@@ -143,6 +183,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Arentino Apple Juice button
@@ -153,6 +197,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Candlehearth Coffee button
@@ -163,6 +211,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Markarth Milk button
@@ -173,6 +225,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Sailor Soda button
@@ -183,6 +239,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
 
         // A click event handler for the Warrior Water button
@@ -193,6 +253,10 @@ namespace PointOfSale
 
             menuBorder.Child = screen;
             screen.DataContext = temp;
+            if (DataContext is Order order)
+            {
+                order.Add(temp);
+            }
         }
     }
 }

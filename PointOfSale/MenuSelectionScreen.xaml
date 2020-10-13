@@ -14,23 +14,24 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
                 <ColumnDefinition />
-            </Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions>            
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="1*"/>
+                <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
-            
-            <TextBlock DockPanel.Dock="Top" Grid.ColumnSpan="3" FontWeight="Bold" TextAlignment="Center" FontSize="30">
+
+            <TextBlock DockPanel.Dock="Top" Grid.ColumnSpan="3" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" FontSize="30">
                 Add to Order
             </TextBlock>
-            <TextBlock Grid.Row="1" Grid.ColumnSpan="1" FontWeight="Bold" TextAlignment="Center" FontSize="15">
+            <TextBlock Grid.Row="1" Grid.ColumnSpan="1" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" FontSize="15">
                 Entrees
             </TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" FontWeight="Bold" TextAlignment="Center" FontSize="15">
+            <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" FontSize="15">
                 Sides
             </TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" FontWeight="Bold" TextAlignment="Center" FontSize="15">
+            <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" FontSize="15">
                 Drinks
             </TextBlock>
             
@@ -88,8 +89,15 @@
                 </Button>
                 <Button Click="AddWarriorWater" Height="50" FontSize="20">
                     Warrior Water
-                </Button>
+                </Button>                
             </StackPanel>
+
+            <Button Grid.Row="3" Grid.Column="2" Height="50" FontWeight="Bold" FontSize="20">
+                Complete Order
+            </Button>
+            <Button Grid.Row="3" Grid.Column="0" Height="50" FontWeight="Bold" FontSize="20">
+                Cancel Order
+            </Button>
 
         </Grid>
     </Border>
