@@ -40,6 +40,7 @@ namespace BleakwindBuffet.Data.Drinks
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SizeSmall"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SizeMedium"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SizeLarge"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Name"));
             }
         }
 
@@ -179,7 +180,6 @@ namespace BleakwindBuffet.Data.Drinks
             get
             {
                 var instructions = new List<string>();
-
                 if (Ice) instructions.Add("Add ice");
                 if (RoomForCream) instructions.Add("Add cream");
 

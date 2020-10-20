@@ -1,7 +1,7 @@
 ﻿/*
  * Author: Brett Montgomery
- * Class name: MenuSelectionScreen.xaml.cs
- * Purpose: User Control Class to represent the Bleakwind Buffet Menu
+ * Class name: ComboCustom.xaml.cs
+ * Purpose: User Control Class to represent the combo customization screen
  */
 
 using System;
@@ -24,38 +24,19 @@ using BleakwindBuffet.Data.Enums;
 using PointOfSale.Customizations;
 using BleakwindBuffet.Data.Combo;
 
-namespace PointOfSale
+namespace PointOfSale.Customizations
 {
     /// <summary>
-    /// Interaction logic for MenuSelection.xaml
+    /// Interaction logic for ComboCustom.xaml
     /// </summary>
-    public partial class MenuSelection : UserControl
+    public partial class ComboCustom : UserControl
     {
-        public MenuSelection()
+        public ComboCustom()
         {
             InitializeComponent();
         }
 
-        // A click event handler for the complete order button
-        void CompleteOrder(object sender, RoutedEventArgs e)
-        {
-            DependencyObject parent = this;
-            do
-            {
-                parent = LogicalTreeHelper.GetParent(parent);
-
-            } while (!(parent is MainWindow || parent is null));
-            if (parent is MainWindow menu)
-            {
-                PaymentOptionsScreen screen = new PaymentOptionsScreen();
-                screen.SetValue(Grid.ColumnSpanProperty, 2);
-                menu.full.Children.Add(screen);
-                menu.full.Children.Remove(this);
-            }
-        }
-
-        // A click event handler for the cancel order button
-        void CancelOrder(object sender, RoutedEventArgs e)
+        void Done(object sender, RoutedEventArgs e)
         {
             DependencyObject parent = this;
             do
@@ -67,26 +48,6 @@ namespace PointOfSale
             if (parent is MainWindow menu)
             {
                 menu.displayBorder.Child = new MenuSelection();
-                menu.orderBorder.Child = new OrderComponent();
-                menu.DataContext = new Order();                
-            }
-                     
-            Order.OrderNumber++;
-        }
-
-        void AddCombo(object sender, RoutedEventArgs e)
-        {
-            BriarheartBurger entree = new BriarheartBurger();
-            DragonbornWaffleFries side = new DragonbornWaffleFries();
-            ArentinoAppleJuice drink = new ArentinoAppleJuice();
-            Combo combo = new Combo(entree, side, drink);
-            var screen = new ComboCustom();
-
-            menuBorder.Child = screen;
-            screen.DataContext = combo;
-            if (DataContext is Order order)
-            {
-                order.Add(combo);
             }
         }
 
@@ -96,11 +57,11 @@ namespace PointOfSale
             var screen = new BriarheartBurgerCustom();
             BriarheartBurger temp = new BriarheartBurger();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if(DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Entree = temp;
             }
         }
 
@@ -110,11 +71,11 @@ namespace PointOfSale
             var screen = new DoubleDraugrCustom();
             DoubleDraugr temp = new DoubleDraugr();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Entree = temp;
             }
         }
 
@@ -124,11 +85,11 @@ namespace PointOfSale
             var screen = new ThalmorTripleCustom();
             ThalmorTriple temp = new ThalmorTriple();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Entree = temp;
             }
         }
 
@@ -138,11 +99,11 @@ namespace PointOfSale
             var screen = new GardenOrcOmeletteCustom();
             GardenOrcOmelette temp = new GardenOrcOmelette();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Entree = temp;
             }
         }
 
@@ -152,11 +113,11 @@ namespace PointOfSale
             var screen = new PhillyPoacherCustom();
             PhillyPoacher temp = new PhillyPoacher();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Entree = temp;
             }
         }
 
@@ -166,11 +127,11 @@ namespace PointOfSale
             var screen = new SmokehouseSkeletonCustom();
             SmokehouseSkeleton temp = new SmokehouseSkeleton();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Entree = temp;
             }
         }
 
@@ -180,11 +141,11 @@ namespace PointOfSale
             var screen = new ThugsTBoneCustom();
             ThugsTBone temp = new ThugsTBone();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Entree = temp;
             }
         }
 
@@ -194,11 +155,11 @@ namespace PointOfSale
             var screen = new DragonbornWaffleFriesCustom();
             DragonbornWaffleFries temp = new DragonbornWaffleFries();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Side = temp;
             }
         }
 
@@ -208,11 +169,11 @@ namespace PointOfSale
             var screen = new FriedMiraakCustom();
             FriedMiraak temp = new FriedMiraak();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Side = temp;
             }
         }
 
@@ -222,11 +183,11 @@ namespace PointOfSale
             var screen = new MadOtarGritsCustom();
             MadOtarGrits temp = new MadOtarGrits();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Side = temp;
             }
         }
 
@@ -236,11 +197,11 @@ namespace PointOfSale
             var screen = new VokunSaladCustom();
             VokunSalad temp = new VokunSalad();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Side = temp;
             }
         }
 
@@ -250,11 +211,11 @@ namespace PointOfSale
             var screen = new ArentinoAppleJuiceCustom();
             ArentinoAppleJuice temp = new ArentinoAppleJuice();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Drink = temp;
             }
         }
 
@@ -264,11 +225,11 @@ namespace PointOfSale
             var screen = new CandlehearthCoffeeCustom();
             CandlehearthCoffee temp = new CandlehearthCoffee();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Drink = temp;
             }
         }
 
@@ -278,11 +239,11 @@ namespace PointOfSale
             var screen = new MarkarthMilkCustom();
             MarkarthMilk temp = new MarkarthMilk();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Drink = temp;
             }
         }
 
@@ -292,11 +253,11 @@ namespace PointOfSale
             var screen = new SailorSodaCustom();
             SailorSoda temp = new SailorSoda();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Drink = temp;
             }
         }
 
@@ -306,11 +267,11 @@ namespace PointOfSale
             var screen = new WarriorWaterCustom();
             WarriorWater temp = new WarriorWater();
 
-            menuBorder.Child = screen;
+            comboBorder.Child = screen;
             screen.DataContext = temp;
-            if (DataContext is Order order)
+            if (DataContext is Combo combo)
             {
-                order.Add(temp);
+                combo.Drink = temp;
             }
         }
     }

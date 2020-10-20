@@ -1,9 +1,10 @@
 ﻿/*
  * Author: Brett Montgomery
- * Class name: ArentinoAppleJuiceCustom.xaml.cs
- * Purpose: User Control Class to represent the Arentino Apple Juice customization screen
+ * Class name: CashDrawerScreen.xaml.cs
+ * Purpose: User Control Class to represent the cash drawer
  */
 
+using BleakwindBuffet.Data.CashDrawerViewModel;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,20 +18,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PointOfSale.Customizations
+namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for ArentinoAppleJuiceCustom.xaml
+    /// Interaction logic for CashDrawerScreen.xaml
     /// </summary>
-    public partial class ArentinoAppleJuiceCustom : UserControl
+    public partial class CashDrawerScreen : UserControl
     {
-        public ArentinoAppleJuiceCustom()
+        public CashDrawerScreen()
         {
             InitializeComponent();
         }
 
-        // Click event handler for the Done button
-        void Done(object sender, RoutedEventArgs e)
+        // Click event handler for the Return to Order button
+        void ReturnToOrder(object sender, RoutedEventArgs e)
         {
             DependencyObject parent = this;
             do
@@ -42,10 +43,7 @@ namespace PointOfSale.Customizations
             if (parent is MainWindow menu)
             {
                 menu.displayBorder.Child = new MenuSelection();
-            }
-            if (parent is ComboCustom combo)
-            {
-                combo.comboBorder.Child = new ComboCustom();
+                menu.full.Children.Remove(this);
             }
         }
     }

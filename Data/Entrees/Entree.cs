@@ -18,6 +18,11 @@ namespace BleakwindBuffet.Data.Entrees
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
+        /// The name of the side
+        /// </summary>
+        public string Name => ToString();
+
+        /// <summary>
         /// The price of the entree
         /// </summary>
         /// <value> US Dollars

@@ -175,7 +175,7 @@ namespace BleakwindBuffet.Data.Combo
             }
             if (e.PropertyName == "Calories")
             {
-                this.NotifyPropertyChanged("Price");
+                this.NotifyPropertyChanged("Calories");
             }
             if (e.PropertyName == "SpecialInstructions")
             {

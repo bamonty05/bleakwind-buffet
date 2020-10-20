@@ -37,16 +37,14 @@
             <TextBlock Text="{Binding Path=OrderNumber}" FontWeight="Bold" TextAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1"></TextBlock>
 
             <TextBlock TextAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Grid.Row="1">Items</TextBlock>
-            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="1">Prices</TextBlock>
-
-            
+            <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Grid.Row="1" Grid.Column="1">Prices</TextBlock>            
 
             <ListView ItemsSource="{Binding}" Name="OrderList" SelectionChanged="EditItemClick" HorizontalContentAlignment="Stretch" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
                             <DockPanel HorizontalAlignment="Stretch">
-                                <TextBlock Text="{Binding}" Width="120" FontSize="10" HorizontalAlignment="Left" Grid.Column="0"></TextBlock>
+                                <TextBlock Text="{Binding Path=Name}" Width="120" FontSize="10" HorizontalAlignment="Left" Grid.Column="0"></TextBlock>
                                 <TextBlock Text="{Binding Path=Price}" Width="30" FontSize="10" HorizontalAlignment="Right" TextAlignment="Right" Grid.Column="1"></TextBlock>
                                 <Button x:Name="RemoveButton" Click="RemoveButtonClick" Grid.Column="2" Grid.ColumnSpan="1" Height="25" Width="25">X</Button>
                             </DockPanel>

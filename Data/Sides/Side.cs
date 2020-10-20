@@ -27,6 +27,11 @@ namespace BleakwindBuffet.Data.Sides
         public virtual bool SizeLarge { get; set; }
 
         /// <summary>
+        /// The name of the side
+        /// </summary>
+        public string Name => ToString();
+
+        /// <summary>
         /// The price of the side
         /// </summary>
         /// <value> US Dollars

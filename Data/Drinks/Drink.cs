@@ -30,6 +30,11 @@ namespace BleakwindBuffet.Data.Drinks
         public virtual bool SizeLarge { get; set; }
 
         /// <summary>
+        /// The name of the drink
+        /// </summary>
+        public string Name => ToString(); 
+
+        /// <summary>
         /// The price of the drink
         /// </summary>
         /// <value> US Dollars

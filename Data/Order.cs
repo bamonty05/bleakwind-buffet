@@ -19,8 +19,6 @@ namespace BleakwindBuffet.Data.Order
     /// </summary>
     public class Order : ICollection, INotifyPropertyChanged, INotifyCollectionChanged
     {
-        public static uint orderNumber = 1;
-
         // List of each item in the order
         public List<IOrderItem> Items = new List<IOrderItem>();
 
@@ -31,7 +29,7 @@ namespace BleakwindBuffet.Data.Order
         public event NotifyCollectionChangedEventHandler CollectionChanged;
 
         // Current order number
-        public static uint OrderNumber { get { return orderNumber; } set { orderNumber = value; } }
+        public static uint OrderNumber { get; set; } = 1;
         
         /// <summary>
         /// Calculates the total calories for the order
@@ -102,9 +100,7 @@ namespace BleakwindBuffet.Data.Order
         public bool IsSynchronized => throw new NotImplementedException();
 
         // SyncRoot property for ICollection interface
-        public object SyncRoot => throw new NotImplementedException();
-
-        
+        public object SyncRoot => throw new NotImplementedException();        
 
         /// <summary>
         /// Invokes property changed event when the subtotal, price, total, or calories changes

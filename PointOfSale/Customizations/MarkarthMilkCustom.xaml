@@ -46,7 +46,7 @@
                         <ScaleTransform ScaleX="3" ScaleY="3" />
                     </CheckBox.LayoutTransform>
                 </CheckBox>
-                <CheckBox Name="largeCheck" IsChecked="{Binding Path=Large}">
+                <CheckBox Name="largeCheck" IsChecked="{Binding Path=SizeLarge}">
                     Large
                     <CheckBox.LayoutTransform>
                         <ScaleTransform ScaleX="3" ScaleY="3" />

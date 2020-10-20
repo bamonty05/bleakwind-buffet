@@ -1,14 +1,12 @@
 ﻿/*
  * Author: Brett Montgomery
- * Class name: MainWindow.xaml.cs
- * Purpose: User Control Class to represent the main window for the POS system for the Bleakwind Buffet
+ * Class name: TransactionSummary.xaml.cs
+ * Purpose: User Control Class to represent the sale finalization controls
  */
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -18,21 +16,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.ComponentModel;
-using BleakwindBuffet.Data.Order;
+using RoundRegister;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CurrencyControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TransactionSummary : UserControl
     {
-        public MainWindow()
+        public TransactionSummary()
         {
             InitializeComponent();
-            this.DataContext = new Order();
-            orderComponent.MenuSelection = menuSelection;
+        }
+
+        void FinalizeSale(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
