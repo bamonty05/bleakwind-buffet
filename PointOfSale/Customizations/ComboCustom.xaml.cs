@@ -54,7 +54,7 @@ namespace PointOfSale.Customizations
         // A click event handler for the Briarheart Burger button
         void AddBriarheartBurger(object sender, RoutedEventArgs e)
         {
-            var screen = new BriarheartBurgerCustom();
+            var screen = new BriarheartBurgerCustom();            
             BriarheartBurger temp = new BriarheartBurger();
 
             comboBorder.Child = screen;
@@ -62,6 +62,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Entree = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -76,6 +77,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Entree = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -90,6 +92,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Entree = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -104,6 +107,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Entree = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -118,6 +122,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Entree = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -132,6 +137,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Entree = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -146,6 +152,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Entree = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -160,6 +167,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Side = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -174,6 +182,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Side = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -188,6 +197,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Side = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -202,6 +212,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Side = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -216,6 +227,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Drink = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -230,6 +242,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Drink = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -244,6 +257,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Drink = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -258,6 +272,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Drink = temp;
+                screen.Combo = combo;
             }
         }
 
@@ -272,6 +287,7 @@ namespace PointOfSale.Customizations
             if (DataContext is Combo combo)
             {
                 combo.Drink = temp;
+                screen.Combo = combo;
             }
         }
     }

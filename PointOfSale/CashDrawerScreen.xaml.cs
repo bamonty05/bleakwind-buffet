@@ -27,7 +27,7 @@ namespace PointOfSale
     {
         public CashDrawerScreen()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         // Click event handler for the Return to Order button

@@ -25,7 +25,7 @@
         <TextBlock Grid.Column="3" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" Width="50" Height="40">Amount <LineBreak></LineBreak> Due</TextBlock>
         <TextBlock Grid.Column="6" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Width="50" Height="40">Change <LineBreak></LineBreak> Owed</TextBlock>
 
-        <TextBlock Text="{Binding Path=Total, StringFormat=c}" Grid.Column="1" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></TextBlock>
+        <TextBlock Text="{Binding Path=OrderTotal, StringFormat=c}" Grid.Column="1" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></TextBlock>
         <TextBlock Text="{Binding Path=AmountDue, StringFormat=c}" Grid.Column="4" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></TextBlock>
         <TextBlock Text="{Binding Path=ChangeOwed, StringFormat=c}" Grid.Column="7" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></TextBlock>
 

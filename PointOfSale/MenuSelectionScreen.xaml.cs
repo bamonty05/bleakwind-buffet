@@ -23,6 +23,7 @@ using BleakwindBuffet.Data.Order;
 using BleakwindBuffet.Data.Enums;
 using PointOfSale.Customizations;
 using BleakwindBuffet.Data.Combo;
+using BleakwindBuffet.Data.CashDrawerViewModel;
 
 namespace PointOfSale
 {
@@ -51,6 +52,8 @@ namespace PointOfSale
                 screen.SetValue(Grid.ColumnSpanProperty, 2);
                 menu.full.Children.Add(screen);
                 menu.full.Children.Remove(this);
+                
+                
             }
         }
 

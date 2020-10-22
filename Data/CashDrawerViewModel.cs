@@ -21,8 +21,24 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
         // Event handler for property changed
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public double OrderTotal
+        {
+            get;
+            private set;
+        }
+
+        // Constructor for CashDrawerViewModel
+        public CashDrawerViewModel(double total)
+        {
+            OrderTotal = total;
+        }
+
         // Constructor for the Pennies
-        public int Pennies => CashDrawer.Pennies;
+        public int Pennies
+        {
+            get => CashDrawer.Pennies;
+            private set => CashDrawer.Pennies = value;            
+        }
 
         private int changePennies = 0;
         // Constructor for Change Pennies
@@ -32,7 +48,7 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             {
                 return changePennies;
             }
-            set
+            private set
             {
                 changePennies = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangePennies"));
@@ -50,12 +66,20 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             set
             {
                 customerPennies = value;
+                GetChange();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CustomerPennies"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountTenured"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOwed"));
             }
         }
 
         // Constructor for the Nickels
-        public int Nickles => CashDrawer.Nickels;
+        public int Nickles
+        {
+            get => CashDrawer.Nickels;
+            private set => CashDrawer.Nickels = value;
+        }
 
         private int changeNickles = 0;
         // Constructor for Change Nickels
@@ -65,7 +89,7 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             {
                 return changeNickles;
             }
-            set
+            private set
             {
                 changeNickles = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeNickles"));
@@ -83,12 +107,20 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             set
             {
                 customerNickles = value;
+                GetChange();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CustomerNickles"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountTenured"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOwed"));
             }
         }
 
         // Constructor for the Dimes
-        public int Dimes => CashDrawer.Dimes;
+        public int Dimes
+        {
+            get => CashDrawer.Dimes;
+            private set => CashDrawer.Dimes = value;
+        }
 
         private int changeDimes = 0;
         // Constructor for Change Dimes
@@ -98,7 +130,7 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             {
                 return changeDimes;
             }
-            set
+            private set
             {
                 changeDimes = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeDimes"));
@@ -116,12 +148,20 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             set
             {
                 customerDimes = value;
+                GetChange();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CustomerDimes"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountTenured"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOwed"));
             }
         }
 
         // Constructor for the Quarters
-        public int Quarters => CashDrawer.Quarters;
+        public int Quarters
+        {
+            get => CashDrawer.Quarters;
+            private set => CashDrawer.Quarters = value;
+        }
 
         private int changeQuarters = 0;
         // Constructor for Change Quarters
@@ -131,7 +171,7 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             {
                 return changeQuarters;
             }
-            set
+            private set
             {
                 changeQuarters = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeQuarters"));
@@ -149,12 +189,20 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             set
             {
                 customerQuarters = value;
+                GetChange();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CustomerQuarters"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountTenured"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOwed"));
             }
         }
 
         // Constructor for the Half Dollars
-        public int HalfDollars => CashDrawer.HalfDollars;
+        public int HalfDollars
+        {
+            get => CashDrawer.HalfDollars;
+            private set => CashDrawer.HalfDollars = value;
+        }
 
         private int changeHalfDollars = 0;
         // Constructor for Change Half Dollars
@@ -164,7 +212,7 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             {
                 return changeHalfDollars;
             }
-            set
+            private set
             {
                 changeHalfDollars = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeHalfDollars"));
@@ -182,12 +230,20 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             set
             {
                 customerHalfDollars = value;
+                GetChange();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CustomerHalfDollars"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountTenured"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOwed"));
             }
         }
 
         // Constructor for the Dollar Coins
-        public int DollarCoins => CashDrawer.Dollars;
+        public int DollarCoins
+        {
+            get => CashDrawer.Dollars;
+            private set => CashDrawer.Dollars = value;
+        }
 
         private int changeDollarCoins = 0;
         // Constructor for Change Dollar Coins
@@ -197,7 +253,7 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             {
                 return changeDollarCoins;
             }
-            set
+            private set
             {
                 changeDollarCoins = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeDollarCoins"));
@@ -215,12 +271,20 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             set
             {
                 customerDollarCoins = value;
+                GetChange();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CustomerDollarCoins"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountTenured"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOwed"));
             }
         }
 
         // Constructor for the One Dollar Bills
-        public int Ones => CashDrawer.Ones;
+        public int Ones
+        {
+            get => CashDrawer.Ones;
+            private set => CashDrawer.Ones = value;
+        }
 
         private int changeOnes = 0;
         // Constructor for Change One Dollar Bills
@@ -230,7 +294,7 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             {
                 return changeOnes;
             }
-            set
+            private set
             {
                 changeOnes = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOnes"));
@@ -248,12 +312,20 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             set
             {
                 customerOnes = value;
+                GetChange();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CustomerOnes"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountTenured"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOwed"));
             }
         }
 
         // Constructor for the Two Dollar Bills
-        public int Twos => CashDrawer.Twos;
+        public int Twos
+        {
+            get => CashDrawer.Twos;
+            private set => CashDrawer.Twos = value;
+        }
 
         private int changeTwos = 0;
         // Constructor for Change Two Dollar Bills
@@ -263,7 +335,7 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             {
                 return changeTwos;
             }
-            set
+            private set
             {
                 changeTwos = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeTwos"));
@@ -281,12 +353,20 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             set
             {
                 customerTwos = value;
+                GetChange();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CustomerTwos"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountTenured"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOwed"));
             }
         }
 
         // Constructor for the Five Dollar Bills
-        public int Fives => CashDrawer.Fives;
+        public int Fives
+        {
+            get => CashDrawer.Fives;
+            private set => CashDrawer.Fives = value;
+        }
 
         private int changeFives = 0;
         // Constructor for Change Five Dollar Bills
@@ -296,7 +376,7 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             {
                 return changeFives;
             }
-            set
+            private set
             {
                 changeFives = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeFives"));
@@ -314,12 +394,20 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             set
             {
                 customerFives = value;
+                GetChange();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CustomerFives"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountTenured"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOwed"));
             }
         }
 
         // Constructor for the Ten Dollar Bills
-        public int Tens => CashDrawer.Tens;
+        public int Tens
+        {
+            get => CashDrawer.Tens;
+            private set => CashDrawer.Tens = value;
+        }
 
         private int changeTens = 0;
         // Constructor for Change Ten Dollar Bills
@@ -329,7 +417,7 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             {
                 return changeTens;
             }
-            set
+            private set
             {
                 changeTens = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeTens"));
@@ -347,12 +435,20 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             set
             {
                 customerTens = value;
+                GetChange();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CustomerTens"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountTenured"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOwed"));
             }
         }
 
         // Constructor for the Twenty Dollar Bills
-        public int Twenties => CashDrawer.Twenties;
+        public int Twenties
+        {
+            get => CashDrawer.Twenties;
+            private set => CashDrawer.Twenties = value;
+        }
 
         private int changeTwenties = 0;
         // Constructor for Change Twenty Dollar Bills
@@ -362,7 +458,7 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             {
                 return changeTwenties;
             }
-            set
+            private set
             {
                 changeTwenties = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeTwenties"));
@@ -380,12 +476,20 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             set
             {
                 customerTwenties = value;
+                GetChange();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CustomerTwenties"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountTenured"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOwed"));
             }
         }
 
         // Constructor for the Fifty Dollar Bills
-        public int Fifties => CashDrawer.Fifties;
+        public int Fifties
+        {
+            get => CashDrawer.Fifties;
+            private set => CashDrawer.Fifties = value;
+        }
 
         private int changeFifties = 0;
         // Constructor for Change Fifty Dollar Bills
@@ -395,7 +499,7 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             {
                 return changeFifties;
             }
-            set
+            private set
             {
                 changeFifties = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeFifties"));
@@ -413,12 +517,20 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             set
             {
                 customerFifties = value;
+                GetChange();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CustomerFifties"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountTenured"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOwed"));
             }
         }
 
         // Constructor for the One-Hundred Dollar Bills
-        public int Hundreds => CashDrawer.Hundreds;
+        public int Hundreds
+        {
+            get => CashDrawer.Hundreds;
+            private set => CashDrawer.Hundreds = value;
+        }
 
         private int changeHundreds = 0;
         // Constructor for Change One-Hundred Dollar Bills
@@ -428,7 +540,7 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             {
                 return changeHundreds;
             }
-            set
+            private set
             {
                 changeHundreds = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeHundreds"));
@@ -446,14 +558,16 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             set
             {
                 customerHundreds = value;
+                GetChange();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CustomerHundreds"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountTenured"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("AmountDue"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("ChangeOwed"));
             }
         }
 
         // Constructor for the Total amount the cash drawer contains
         public double Total => CashDrawer.Total;
-
-        
 
         // Constructor for Amount Due
         public double AmountTenured
@@ -465,13 +579,13 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
         // Constructor for Amount Tenured
         public double AmountDue
         {
-            get => Total - AmountTenured;
+            get => Math.Max(0, OrderTotal - AmountTenured);
         }
 
         // Constructor for Change Owed
         public double ChangeOwed
         {
-            get => AmountTenured - Total;
+            get => Math.Max(0, AmountTenured - OrderTotal);
         }
 
         /// <summary>
@@ -480,9 +594,10 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
         /// <remarks>
         /// Algorithm taken from https://www.jeremyshanks.com/create-change-calculator-c/
         /// </remarks>
-        /// <param name="total">The total change owed</param>
-        public void GetChange(double total)
+        public void GetChange()
         {
+            double total = ChangeOwed;
+
             ChangeHundreds = (int)(total / 100);
             total %= 100;
 
@@ -508,18 +623,52 @@ namespace BleakwindBuffet.Data.CashDrawerViewModel
             total %= 1;
 
             ChangeHalfDollars = (int)(total / 0.5);
-            total %= 0.5;
+            total %= 0.50;
 
             ChangeQuarters = (int)(total / .25);
-            total %= .25;
+            total %= 0.25;
 
             ChangeDimes = (int)(total / .10);
-            total %= .10;
+            total %= 0.10;
 
             ChangeNickles = (int)(total / .05);
-            total %= .05;
+            total %= 0.05;
 
             ChangePennies = (int)(total / .01);
+        }
+
+        /// <summary>
+        /// Method for finalizing the sale and updating the values of the currency inside the cash drawer
+        /// </summary>
+        public void ApplyTransaction()
+        {
+            CashDrawer.OpenDrawer();
+            Pennies += CustomerPennies;
+            Pennies -= ChangePennies;
+            Nickles += CustomerNickles;
+            Nickles -= ChangeNickles;
+            Dimes += CustomerDimes;
+            Dimes -= ChangeDimes;
+            Quarters += CustomerQuarters;
+            Quarters -= ChangeQuarters;
+            HalfDollars += CustomerHalfDollars;
+            HalfDollars -= ChangeHalfDollars;
+            DollarCoins += CustomerDollarCoins;
+            DollarCoins -= ChangeDollarCoins;
+            Ones += CustomerOnes;
+            Ones -= ChangeOnes;
+            Twos += CustomerTwos;
+            Twos -= ChangeTwos;
+            Fives += CustomerFives;
+            Fives -= ChangeFives;
+            Tens += CustomerTens;
+            Tens -= ChangeTens;
+            Twenties += CustomerTwenties;
+            Twenties -= ChangeTwenties;
+            Fifties += CustomerFifties;
+            Fifties -= ChangeFifties;
+            Hundreds += CustomerHundreds;
+            Hundreds -= ChangeHundreds;
         }
     }
 }

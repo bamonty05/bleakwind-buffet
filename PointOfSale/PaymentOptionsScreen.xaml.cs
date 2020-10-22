@@ -82,7 +82,11 @@ namespace PointOfSale
                 CashDrawerScreen screen = new CashDrawerScreen();
                 screen.SetValue(Grid.ColumnSpanProperty, 2);
                 menu.full.Children.Add(screen);
-                menu.full.Children.Remove(this);                
+                menu.full.Children.Remove(this);
+                if (menu.DataContext is Order order)
+                {
+                    screen.DataContext = new CashDrawerViewModel(order.Total);
+                }
             }
         }
 

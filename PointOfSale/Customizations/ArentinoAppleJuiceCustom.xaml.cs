@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Combo;
 
 namespace PointOfSale.Customizations
 {
@@ -29,6 +30,13 @@ namespace PointOfSale.Customizations
             InitializeComponent();
         }
 
+        // Constructor for Combo
+        public Combo Combo
+        {
+            get;
+            set;
+        }
+
         // Click event handler for the Done button
         void Done(object sender, RoutedEventArgs e)
         {
@@ -36,16 +44,17 @@ namespace PointOfSale.Customizations
             do
             {
                 parent = LogicalTreeHelper.GetParent(parent);
-
             } while (!(parent is MainWindow || parent is null));
-
             if (parent is MainWindow menu)
             {
-                menu.displayBorder.Child = new MenuSelection();
-            }
-            if (parent is ComboCustom combo)
-            {
-                combo.comboBorder.Child = new ComboCustom();
+                if (Combo == null)
+                {
+                    menu.displayBorder.Child = new MenuSelection();
+                }
+                else
+                {
+                    menu.displayBorder.Child = new ComboCustom() { DataContext = this.Combo };
+                }
             }
         }
     }
