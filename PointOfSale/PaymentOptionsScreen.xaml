@@ -15,7 +15,7 @@
                 </ColumnDefinition>
                 <ColumnDefinition Width="1*">
                 </ColumnDefinition>
-                <ColumnDefinition Width="2*">
+                <ColumnDefinition Width="1.5*">
                 </ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -29,11 +29,11 @@
                 </RowDefinition>
                 <RowDefinition Height="75*">
                 </RowDefinition>
-                <RowDefinition Height="15*">
+                <RowDefinition Height="20*">
                 </RowDefinition>
-                <RowDefinition Height="15*">
+                <RowDefinition Height="20*">
                 </RowDefinition>
-                <RowDefinition Height="15*">
+                <RowDefinition Height="20*">
                 </RowDefinition>
             </Grid.RowDefinitions>
 
@@ -48,8 +48,8 @@
                     <DataTemplate>
                         <StackPanel>
                             <DockPanel HorizontalAlignment="Stretch">
-                                <TextBlock Text="{Binding}" Width="120" FontSize="10" HorizontalAlignment="Left" Grid.Column="0"></TextBlock>
-                                <TextBlock Text="{Binding Path=Price, StringFormat=c}" Width="30" FontSize="10" HorizontalAlignment="Right" TextAlignment="Right" Grid.Column="1"></TextBlock>
+                                <TextBlock Text="{Binding}" Width="300" FontSize="20" HorizontalAlignment="Left" Grid.Column="0"></TextBlock>
+                                <TextBlock Text="{Binding Path=Price, StringFormat=c}" Width="50" FontSize="20" HorizontalAlignment="Right" TextAlignment="Right" Grid.Column="1"></TextBlock>
                             </DockPanel>
                             <ListView ItemsSource="{Binding Path=SpecialInstructions}"></ListView>
                         </StackPanel>
@@ -58,13 +58,13 @@
             </ListView>
 
             <TextBlock TextAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="20" Grid.Row="5">Subtotal:</TextBlock>
-            <TextBlock Name="subtotal" Text="{Binding Path=Subtotal, StringFormat=c}" FontWeight="Bold" VerticalAlignment="Top" TextAlignment="Left" Grid.Row="5" Grid.Column="1"></TextBlock>
+            <TextBlock Name="subtotal" Text="{Binding Path=Subtotal, StringFormat=c}" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" TextAlignment="Left" Grid.Row="5" Grid.Column="1"></TextBlock>
 
             <TextBlock TextAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="20" Grid.Row="6">Tax:</TextBlock>
-            <TextBlock Name="tax" Text="{Binding Path=Tax, StringFormat=c}" FontWeight="Bold" VerticalAlignment="Top" TextAlignment="Left" Grid.Row="6" Grid.Column="1"></TextBlock>
+            <TextBlock Name="tax" Text="{Binding Path=Tax, StringFormat=c}" FontSize="20" FontWeight="Bold" VerticalAlignment="Top" TextAlignment="Left" Grid.Row="6" Grid.Column="1"></TextBlock>
 
             <TextBlock TextAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="20" Grid.Row="7">Total:</TextBlock>
-            <TextBlock Name="total" Text="{Binding Path=Total, StringFormat=c}" FontWeight="Bold" VerticalAlignment="Bottom" TextAlignment="Left" Grid.Row="7" Grid.Column="1"></TextBlock>
+            <TextBlock Name="total" Text="{Binding Path=Total, StringFormat=c}" FontSize="20" FontWeight="Bold" VerticalAlignment="Bottom" TextAlignment="Left" Grid.Row="7" Grid.Column="1"></TextBlock>
 
             <Button Name="CreditButton" Click="CreditDebit" Grid.Row="2" Grid.Column="2" FontSize="20">Credit/Debit
                 <Button.LayoutTransform>
