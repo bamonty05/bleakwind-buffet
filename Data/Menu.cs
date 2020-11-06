@@ -312,7 +312,7 @@ namespace BleakwindBuffet.Data.Menu
         /// <param name="calorieMin">Minimum calorie value</param>
         /// <param name="calorieMax">Maximum calorie value</param>
         /// <returns>A list of items that partain to the given calorie constraints</returns>
-        public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> items, uint? calorieMin, uint? calorieMax)
+        public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> items, int? calorieMin, int? calorieMax)
         {
             if (calorieMin == null && calorieMax == null) return items;
 

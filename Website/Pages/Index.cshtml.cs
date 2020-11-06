@@ -44,13 +44,13 @@ namespace Website.Pages
         /// Current min calories
         /// </summary>
         [BindProperty]
-        public uint? CalorieMin { get; set; }
+        public int? CalorieMin { get; set; }
 
         /// <summary>
         /// Current max calories
         /// </summary>
         [BindProperty]
-        public uint? CalorieMax { get; set; }
+        public int? CalorieMax { get; set; }
 
         /// <summary>
         /// Current min price
