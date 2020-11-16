@@ -104,6 +104,11 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        public override string Description
+        {
+            get { return "Cheesey Grits."; }
+        }
+
         /// <summary>
         /// Stores values of prices for each available size
         /// </summary>

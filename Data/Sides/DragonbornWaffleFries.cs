@@ -104,6 +104,11 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        public override string Description
+        {
+            get { return "Crispy fried potato waffle fries."; }
+        }
+
         /// <summary>
         /// Stores values of prices for each available size
         /// </summary>

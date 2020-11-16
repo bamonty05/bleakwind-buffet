@@ -72,10 +72,52 @@ namespace Website.Pages
         public void OnPost()
         {
             Items = Menu.FullMenu();
-            Items = Menu.Search(Items, SearchTerms);
-            Items = Menu.FilterByCategory(Items, Category);
-            Items = Menu.FilterByCalories(Items, CalorieMin, CalorieMax);
-            Items = Menu.FilterByPrice(Items, PriceMin, PriceMax);
+
+            // Search menu items for the SearchTerms
+            if (SearchTerms != null)
+            {
+                Items = Items.Where(item => item.ToString() != null && item.ToString().Contains(SearchTerms, StringComparison.InvariantCultureIgnoreCase));
+            }
+
+            // Filter by item type
+            if (Category != null && Category.Length != 0)
+            {
+                Items = Items.Where(item => (item is Entree entree && Category.Contains("Entree")) || (item is Side side && Category.Contains("Side")) || (item is Drink drink && Category.Contains("Drink")));
+            }
+
+            // Filters items based on calories
+            if (CalorieMin != null || CalorieMax != null)
+            {
+                if (CalorieMin == null)
+                {
+                    Items = Items.Where(item => item.Calories <= CalorieMax);
+                }
+                else if (CalorieMax == null)
+                {
+                    Items = Items.Where(item => item.Calories >= CalorieMin);
+                }
+                else
+                {
+                    Items = Items.Where(item => item.Calories <= CalorieMax && item.Calories >= CalorieMin);
+                }
+            }
+
+            // Filters items based on price
+            if (PriceMin != null || PriceMax != null)
+            {
+                if (PriceMin == null)
+                {
+                    Items = Items.Where(item => item.Price <= PriceMax);
+                }
+                else if (PriceMax == null)
+                {
+                    Items = Items.Where(item => item.Price >= PriceMin);
+                }
+                else
+                {
+                    Items = Items.Where(item => item.Price <= PriceMax && item.Price >= PriceMin);
+                }
+            }
         }
     }
 }

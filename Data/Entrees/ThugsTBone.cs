@@ -37,6 +37,11 @@ namespace BleakwindBuffet.Data.Entrees
             get { return 982; }
         }
 
+        public override string Description
+        {
+            get { return "Juicy T-Bone, not much else to say."; }
+        }
+
         /// <summary>
         /// Creates a list of special instructions based on the boolean values of the private backing variables
         /// </summary>

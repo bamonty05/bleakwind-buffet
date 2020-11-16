@@ -55,15 +55,19 @@
     </div>
 </form>
 
-<div>
+<div class="flex-columns">
+
     <div>
-        <h2 class="text-left">Entrees</h2>
-        <ul class="menu-item">
+        <h1>Entrees</h1>
+        <ul>
             @foreach (Entree entree in Menu.Entrees())
             {
                 <li>
                     <div class="details">
                         <h3>@entree.ToString()</h3>
+                        <div class="description">
+                            Description: @entree.Description
+                        </div>
                         <div class="price">
                             $@entree.Price
                         </div>
@@ -77,13 +81,16 @@
     </div>
 
     <div>
-        <h2 class="text-left">Sides</h2>
-        <ul class="menu-item">
+        <h1>Sides</h1>
+        <ul>
             @foreach (Side side in Menu.Sides())
             {
                 <li>
                     <div class="details">
                         <h3>@side.ToString()</h3>
+                        <div class="description">
+                            Description: @side.Description
+                        </div>
                         @if (side.Size == Size.Small)
                         {
                             <div class="price">
@@ -118,13 +125,16 @@
     </div>
 
     <div>
-        <h2 class="text-left">Drinks</h2>
-        <ul class="menu-item">
+        <h1>Drinks</h1>
+        <ul>
             @foreach (Drink drink in Menu.Drinks())
             {
                 <li>
                     <div class="details">
                         <h3>@drink.ToString()</h3>
+                        <div class="description">
+                            Description: @drink.Description
+                        </div>
                         @if (drink.Size == Size.Small)
                         {
                             <div class="price">
@@ -157,6 +167,7 @@
             }
         </ul>
     </div>
+
 </div>
 
 <h2 class="text-left">Combo</h2>

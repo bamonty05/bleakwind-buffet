@@ -104,6 +104,11 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        public override string Description
+        {
+            get { return "Fair trade, fresh ground dark roast coffee."; }
+        }
+
         /// <summary>
         /// Stores values of prices for each available size
         /// </summary>

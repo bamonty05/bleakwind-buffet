@@ -105,6 +105,11 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        public override string Description
+        {
+            get { return "Perfectly prepared hash brown pancakes."; }
+        }
+
         /// <summary>
         /// Stores values of prices for each available size
         /// </summary>

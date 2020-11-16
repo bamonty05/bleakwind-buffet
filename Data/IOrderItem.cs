@@ -30,5 +30,10 @@ namespace BleakwindBuffet.Data
         /// A lsit of special intrustions for the item
         /// </summary>
         List<string> SpecialInstructions { get; }
+
+        /// <summary>
+        /// A string consisting of the items description
+        /// </summary>
+        string Description { get; }
     }
 }

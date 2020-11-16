@@ -144,6 +144,14 @@ namespace BleakwindBuffet.Data.Combo
             }
         }
 
+        public string Description
+        {
+            get
+            {
+                return Entree.Description + Side.Description + Drink.Description;
+            }
+        }
+
         /// <summary>
         /// A list of the special Instructions for the combo
         /// </summary>
